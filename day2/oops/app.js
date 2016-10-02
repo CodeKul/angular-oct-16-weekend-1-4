@@ -26,17 +26,26 @@
       return 'Work';
     }
   };
+
   var obj = Object.create(hello, {
     foo : {writable : true,value : 10}
   });
-  console.log('Chid '+obj.myFun());
+
+  console.log('Child '+obj.myFun());
   Car.prototype.myMethod = function(){
     console.log('Accessed');
   };
+
   var animal = new function(){
+    this.myName = function(){
+      return 'Elephant';
+    };
   };
+
+  console.log(animal.myName());
 
   var carh = new Car();
   carh.myMethod();
-  console.log('Val is '+obj.foo);;
+  console.log('Val is '+obj.foo);
+  
 }());

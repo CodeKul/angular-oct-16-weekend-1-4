@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>CodeKul.com</title>
+</head>
+<body ng-app = "MyApp">
+  <div ng-controller="MyController">
+    In Side - {{myName }}
+
+    <div>
+        <input type="button" ng-click="fireOnClick('Button One')"/>
+    </div>
+    <div>
+        <input type="button" ng-click="fireOnClick('Button Two')"/>
+    </div>
+
+    <div ng-controller="OuterController">
+
+      <br/> Outer Controller My Name- {{myName}}
+      <br/>Outer Controller Outer Name- {{outerName}}
+        <br/> Outer Controller Inner Name- {{innerName}}
+        <br/> Outer Controller Inner 2 Name- {{inner2Name}}
+      <div ng-controller="InnerController">
+          <br/> Inner Controller - {{myName}}
+          <br/> Inner Controller Outer Name- {{outerName}}
+          <br/> Inner Controller Inner Name- {{innerName}}
+          <br/> Inner Controller Inner 2 Name- {{inner2Name}}
+          <div ng-controller = "Inner2Controller">
+              <br/> Inner 2 Controller - {{myName}}
+              <br/> Inner 2 Controller Outer Name- {{outerName}}
+              <br/> Inner 2 Controller Inner Name- {{innerName}}
+              <br/> Inner 2 Controller Inner 2 Name- {{inner2Name}}
+          </div>
+      </div>
+    </div>
+  </div>
+    Out Side - {{myName}}
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>

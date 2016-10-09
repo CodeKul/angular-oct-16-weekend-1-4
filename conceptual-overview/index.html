@@ -1,0 +1,37 @@
+<html>
+<head>
+
+</head>
+<body ng-app="MyApp">
+
+  <div ng-controller="MyController as my">
+
+    <div >
+      <input type="text" ng-model="my.myName"/>
+    </div>
+    <div >
+        {{my.myName}}
+    </div>
+
+    <my-dir></my-dir>
+    <my-dir></my-dir>
+    <my-dir></my-dir>
+    <my-dir></my-dir>
+    <my-dir></my-dir>
+    <my-dir></my-dir>
+
+    <div >
+        <input type="button" ng-click="my.goToWeb()"/>
+    </div>
+
+    <div >
+        {{my.calc() | number}}
+    </div>
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <script src="mydirective.js" charset="utf-8"></script>
+  <script src="my-service.js" charset="utf-8"></script>
+</body>
+</html>

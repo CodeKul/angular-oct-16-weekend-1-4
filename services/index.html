@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Angular Services </title>
+</head>
+<body ng-app="MyApp">
+  <div ng-controller="MyController">
+    {{mss}}
+    <div class="">
+        <input type="text"  ng-model="myName">
+    </div>
+    <div>
+      <input type="text" ng-model="movieName"> <input type="button" ng-click="addMovie()"/>
+    </div>
+
+    <div >
+      <input type="button" value="Info" ng-click="onInfo()">
+    </div>
+
+    <div >
+      <input type="button" value="Error" ng-click="onError('anroid',[])">
+    </div>
+
+    <div>
+      <ul>
+        <li ng-repeat="rate in rates">{{rate}}</li>
+      </ul>
+    </div>
+  </div>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+ <script src="app.js" charset="utf-8"></script>
+ <script src="myservice.js" charset="utf-8"></script>
+ <script src="ws.js" charset="utf-8"></script>
+ <script src="url.js" charset="utf-8"></script>
+</body>
+</html>

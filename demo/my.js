@@ -1,3 +1,13 @@
+
+var my = {
+  myName : 'Android',
+  mobiles : ['Apple','Android'],
+  other : [
+    {city: 'pune'},
+    {city : 'Mumbai'}
+  ]
+};
+
 function callDemoEnquiry(lead){
 
      var jsonEnquiryForm={
